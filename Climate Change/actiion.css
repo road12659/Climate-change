@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Take Action Styling */
+
+section.act{
+    box-sizing: border-box;
+    padding: 200px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(global-warming-protest-close-up.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+section.act::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 0;}
+    50% { opacity: 0.3;}
+}
+
+span{
+    color: green;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+   from { text-shadow: 0 0 10px rgba(0, 255, 136, 0.5); }
+    to { text-shadow: 0 0 20px rgba(0, 255, 136, 0.8), 0 0 30px rgba(0, 255, 136, 0.6); } 
+}
+
+.act h1{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 60px;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: slideInLeft 1.2s ease-out;
+    position: relative;
+}
+
+.act h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00ff88, #00ccff);
+    animation: expandLine 2s ease-out 0.5s forwards;
+}
+
+ @keyframes slideInLeft {
+    from {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+    to {
+    opacity: 1;
+    transform: translateX(0);
+        }
+}
+
+@keyframes expandLine {
+    to { width: 200px; }
+}
+
+.act h2{
+    font-family: sans-serif;
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    animation: slideInRight 1.2s ease-out 0.3s both;
+    position: relative;
+}
+
+ @keyframes slideInRight {
+    from {
+    opacity: 0;
+    transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.act h2:hover {
+    animation: float 2s ease-in-out infinite;
+}
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+}
+
+.camp h1{
+    padding: 20px 18px;
+}
+
+.camp h1{
+    font-family: sans-serif;
+    color: #2A310F;
+}
+
+.camp h2{
+    font-family: sans-serif;
+    color: #2A310F;
+    text-align: center;
+}
+.vid iframe{
+    display: flex;
+    justify-self: center;
+    width: 60%;
+    height: 70%;
+}
+
+.download-container {
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            text-decoration: none;
+            padding: 18px 36px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            min-width: 280px;
+            border: 2px solid transparent;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .download-btn:active {
+            transform: translateY(-1px) scale(1.02);
+            transition: all 0.1s ease;
+        }
+
+        .download-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .download-btn:hover .download-icon {
+            transform: translateY(2px);
+            animation: bounce 0.6s ease-in-out;
+        }
+
+        .btn-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .climate-title {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .climate-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            animation: fadeIn 1.2s ease-out 0.3s both;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(2px);
+            }
+            40% {
+                transform: translateY(-3px);
+            }
+            60% {
+                transform: translateY(-1px);
+            }
+        }
+
+        /* Floating particles animation */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+}
+
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) scale(0);
+            }
+            10% {
+                transform: translateY(90vh) scale(1);
+            }
+            90% {
+                transform: translateY(-10vh) scale(1);
+            }
+            100% {
+                transform: translateY(-10vh) scale(0);
+            }
+        }
+
+        /* Tablet Styles */
+        @media screen and (max-width: 768px) {
+            .climate-title {
+                font-size: 1.8rem;
+            }
+            
+            .climate-subtitle {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+            
+            .download-btn {
+                min-width: 260px;
+                padding: 16px 32px;
+                font-size: 1rem;
+            }
+            
+            .download-btn:hover {
+                transform: translateY(-2px) scale(1.03);
+            }
+        }
+
+        /* Mobile Styles */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .climate-title {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+            
+            .climate-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+                padding: 0 10px;
+            }
+            
+            .download-btn {
+                min-width: 240px;
+                padding: 14px 28px;
+                font-size: 0.95rem;
+                gap: 10px;
+            }
+            
+            .download-icon {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .download-btn:hover {
+                transform: translateY(-1px) scale(1.02);
+                box-shadow: 0 12px 25px rgba(40, 167, 69, 0.35);
+            }
+}
+
+        /* Small Mobile */
+        @media screen and (max-width: 320px) {
+            .climate-title {
+                font-size: 1.3rem;
+            }
+            
+            .download-btn {
+                min-width: 200px;
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+}
+
+
+.form4 {
+            background: white;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .form4 h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        .form4 .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form4 input, .form4 textarea {
+            width: 100%;
+            padding: 15px 0;
+            border: none;
+            border-bottom: 2px solid #e0e0e0;
+            font-size: 16px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .form4 input:focus, .form4 textarea:focus {
+            outline: none;
+            border-bottom-color: #4CAF50;
+        }
+        
+        .form4 label {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            font-size: 16px;
+            color: #999;
+            transition: all 0.3s ease;
+            cursor: text;
+        }
+        
+        .form4 input:focus + label,
+        .form4 textarea:focus + label,
+        .form4 input:not(:placeholder-shown) + label,
+        .form4 textarea:not(:placeholder-shown) + label {
+            top: -5px;
+            font-size: 12px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .form4 .submit-btn {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .form4 .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        @media (max-width: 768px) {
+            .forms-grid {
+                grid-template-columns: 1fr;
+            }
+}
